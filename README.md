@@ -1,3 +1,3 @@
 # Angular Input Formatter
 
-Run `npm start` to make it work
+Run `npm start` to check the sample

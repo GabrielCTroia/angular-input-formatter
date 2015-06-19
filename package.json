@@ -15,9 +15,9 @@
   ],
   "scripts": {
     "postinstall": "bower install",
-    "prestart": "npm install",
+    "prestart": "npm install && npm run prebundle",
     "start": "http-server ./sample -a localhost -p 7070 -c-1",
-    "prebundle": "npm run compile && mv build/src/** .",
+    "prebundle": "npm run compile && rm -rf ./sample/bower_components ./sample/build && cd ./sample && ln -s ../bower_components bower_components && ln -s ../build build && cd ..",
     "bundle": "dts-generator --name $npm_package_name --main ${npm_package_name}/index --baseDir . --exclude node_modules/dts-generator/node_modules/typescript/bin/lib.es6.d.ts -out ${npm_package_name}.d.ts *.d.ts",
     "clean": "rm -rf build coverage",
     "precompile": "npm run clean",
