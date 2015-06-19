@@ -30,6 +30,6 @@ bower_components
 # Artifacts
 build
 #*.d.ts
-*.js
+#*.js
 #typings
 .idea
